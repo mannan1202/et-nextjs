@@ -26,25 +26,25 @@ export default function Expenses() {
           </span>
         </div>
       </nav>
-      <div className="my-5 rounded-md bg-white w-full shadow-md p-4 grid grid-cols-1 overflow-y-scroll min-h-0 ">
+      <div className="my-5 rounded-md bg-white w-full shadow-md p-4 grid grid-cols-1 overflow-y-scroll overscroll-y-contain h-1/3 divide-y  ">
         {transitions((props, item) => {
           return (
             <animated.div key={item.id} style={{ ...props }}>
               <div className="text-slate-800 flex justify-between py-3">
                 <span className="self-center flex flex-col space-y-1">
-                  <span className="text-lg font-semibold tracking-wider leading-loose">
+                  <span className="text-xl font-bold  tracking-tighter leading-snug self-start">
                     {item.title}
                   </span>
-                  <div className="flex space-x-2 text-xs text-slate-600">
+                  <div className="flex space-x-2 text-xs text-slate-600 self-start">
                     <span className="uppercase ">{item.paid_by}</span>
-                    <span className="w-1 h-1 bg-slate-800 self-center rounded-full">
+                    <span className="w-1 h-1 bg-slate-600 self-center rounded-full">
                       &nbsp;
                     </span>
                     <span>{item.category}</span>
                   </div>
                 </span>
                 <span className="self-center flex flex-col space-y-1">
-                  <span className="text-lg font-semibold tracking-wider leading-loose self-end">
+                  <span className="text-xl font-bold tracking-tighter leading-snug self-end">
                     ${item.amount}
                   </span>
                   <span className="self-end text-xs text-slate-600">

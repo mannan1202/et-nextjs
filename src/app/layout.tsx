@@ -1,7 +1,7 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Nunito_Sans } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const nunito_sans = Nunito_Sans({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Expense Tracker',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + 'overscroll-y-none'}>
+      <body className={nunito_sans.className + ' overscroll-y-none'}>
         {children}
       </body>
     </html>
